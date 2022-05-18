@@ -1,5 +1,4 @@
 Unk980929={'dir': '', 'cloudtype': 'moodle', 'moodle_host': 'http://eduvirtual.uho.edu.cu/', 'moodle_repo_id': 3, 'moodle_user': 'mmartin', 'moodle_password': 'mmartin2016', 'isadmin': 1, 'zips': 500, 'uploadtype': 'calendar', 'proxy': 'socks5', 'tokenize': 0}
-Orisha91={'dir': '', 'cloudtype': 'moodle', 'moodle_host': '---', 'moodle_repo_id': 3, 'moodle_user': '---', 'moodle_password': '---', 'isadmin': 0, 'zips': 100, 'uploadtype': 'evidence', 'proxy': '', 'tokenize': 0}
 DRP96={'dir': '', 'cloudtype': 'moodle', 'moodle_host': '---', 'moodle_repo_id': 4, 'moodle_user': '', 'moodle_password': '---', 'isadmin': 0, 'zips': 100, 'uploadtype': 'draft', 'proxy': '', 'tokenize': 0}
 FLOKIJM={'dir': '', 'cloudtype': 'moodle', 'moodle_host': '---', 'moodle_repo_id': 3, 'moodle_user': '---', 'moodle_password': '---', 'isadmin': 0, 'zips': 100, 'uploadtype': 'evidence', 'proxy': 'socks5', 'tokenize': 0}
 pinksusy2={'dir': '', 'cloudtype': 'moodle', 'moodle_host': '---', 'moodle_repo_id': 4, 'moodle_user': '---', 'moodle_password': '---', 'isadmin': 0, 'zips': 100, 'uploadtype': 'calendar', 'proxy': '', 'tokenize': 0}
