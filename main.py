@@ -445,7 +445,7 @@ def onmessage(update,bot:ObigramClient):
                     statInfo = infos.createStat(username,user_info,jdb.is_admin(username))
                     bot.sendMessage(update.message.chat.id,statInfo)
             return
-        if '/dir' in msgText:
+        if '/carpeta' in msgText:
             try:
                 cmd = str(msgText).split(' ',2)
                 repoid = cmd[1]
@@ -516,6 +516,25 @@ def onmessage(update,bot:ObigramClient):
              else:
                 bot.editMessageText(message,'❌Error y Causas🧐\n1-Revise su Cuenta\n2-Servidor Desabilitado: '+client.path)
              pass
+        elif '/delete' in msgText:
+            enlace = msgText.split('/delete')[-1]
+            proxy = ProxyCloud.parse(user_info['proxy'])
+            client = MoodleClient(user_info['moodle_user'],
+                                   user_info['moodle_password'],
+                                   user_info['moodle_host'],
+                                   user_info['moodle_repo_id'],
+                                   proxy=proxy)
+            loged= client.login()
+            if loged:
+                #update.message.chat.id
+                deleted = client.delete(enlace)
+
+                bot.sendMessage(update.message.chat.id, "Archivo eliminado con exito...🗃️🗑️")
+            else:
+                bot.editMessageText(message,'❌Error y Causas🧐\n1-Revise su Cuenta\n2-Servidor Desabilitado: '+client.path)
+        elif 'http' in msgText:
+            url = msgText
+            ddl(update,bot,message,url,file_name='',thread=thread,jdb=jdb)
         elif '/del_' in msgText and user_info['cloudtype']=='moodle':
             findex = int(str(msgText).split('_')[1])
             proxy = ProxyCloud.parse(user_info['proxy'])
